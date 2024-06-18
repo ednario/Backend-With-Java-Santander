@@ -3,17 +3,30 @@ import java.util.concurrent.ThreadLocalRandom;;
 
 public class ProcessoSeletivo {
   public static void main(String[] args) {
-    analizarCandidato(1900.0);
-    analizarCandidato(2000.0);
-    analizarCandidato(2100.0);
-    selecaoDeCandidatos();
+    imprimirSelecionados();
+  }
+
+  static void imprimirSelecionados () {
+    String [] candidatos = {"João", "Maria", "Pedro", "Augusto", "Antonio"};
+
+    System.out.println("Imprimindo a lista de candidatos informando o indice do elemento");
+
+    for (int i = 0; i < candidatos.length; i++) {
+      System.out.println("O candidato de n " + (i + 1) + " é " + candidatos[i]);
+    }
+
+    System.out.println("Forma alternativa de imprimir a lista de candidatos");
+
+    for (String candidato: candidatos) {
+      System.out.println("O candidato " + candidato + " foi selecionado para a vaga.");
+    }
   }
 
   static void selecaoDeCandidatos () {
     String [] candidatos = {"João", "Maria", "Pedro", "Augusto", "Antonio", "Febrero", "Miguel", "Março", "Cristiano", "Rafael"};
 
     int candidatosSelecionados = 0;
-    int candidatoAtual = 0;
+    int candidatoAtual = 0; 
     double salarioBase = 2000.0;
 
     while (candidatosSelecionados < 5 && candidatoAtual < candidatos.length) {
