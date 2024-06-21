@@ -10,6 +10,7 @@ public class ContadorModel {
 	private int						parametroDois;
 
 	public void getDadosFromTerminal() {
+		@SuppressWarnings("resource")
 		Scanner terminal = new Scanner(System.in).useLocale(Locale.US);
 
 		System.out.println("Digite o primeiro parâmetro:");
