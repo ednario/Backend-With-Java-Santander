@@ -1,42 +1,51 @@
 package lanchonete;
 
 public class Cozinheiro {
-  private String nome;
-  private int idade;
-
-  // Construtor
-  public Cozinheiro(String nome, int idade) {
-      this.nome = nome;
-      this.idade = idade;
-  }
-
-  // Método para preparar uma refeição
-  public void prepararRefeicao(String prato) {
-      System.out.println(nome + " está preparando um delicioso " + prato);
-  }
-
-  // Método para verificar a disponibilidade de ingredientes
-  public boolean verificarIngredientes(String ingrediente) {
-      // Lógica para verificar se o ingrediente está disponível
-      // (simulando com um retorno aleatório)
-      return Math.random() < 0.5;
-  }
-
-  // Método para lavar os utensílios de cozinha
-  public void lavarUtensilios() {
-      System.out.println(nome + " está lavando os utensílios de cozinha.");
-  }
-
-  // Método principal para testar a classe
-  public static void main(String[] args) {
-      Cozinheiro chef = new Cozinheiro("Gordon Ramsay", 45);
-      chef.prepararRefeicao("Risoto de cogumelos");
-      boolean temIngredientes = chef.verificarIngredientes("cogumelos");
-      if (temIngredientes) {
-          System.out.println("Os ingredientes estão disponíveis!");
-      } else {
-          System.out.println("Está faltando algum ingrediente.");
-      }
-      chef.lavarUtensilios();
-  }
+	//pode ser default
+	public void adicionarLancheNoBalcao() {
+		System.out.println("ADICIONANDO LANCHE NATURAL HAMBÚRGUER NO BALCÃO");
+	}
+	//pode ser default
+	public void adicionarSucoNoBalcao() {
+		System.out.println("ADICIONANDO SUCO NO BALCÃO");
+	}
+	//pode ser default
+	public void adicionarComboNoBalcao() {
+		adicionarLancheNoBalcao();
+		adicionarSucoNoBalcao();
+	}
+	public void prepararLanche() {
+		System.out.println("PREPARANDO LANCHE TIPO HAMBÚRGUER");
+	}
+	public void prepararVitamina() {
+		System.out.println("PREPARANDO SUCO");
+	}
+	public void prepararCombo() {
+		prepararLanche();
+		prepararVitamina();
+	}
+	public void selecionarIngredientesLanche() {
+		System.out.println("SELECIONADO O PÃO, SALADA, OVO E CARNE");
+	}
+	public void selecionarIngredientesVitamina() {
+		System.out.println("SELECIONADO FRUTA, LEITE E SUCO");
+	}
+	public void lavarIngredientes() {
+		System.out.println("LAVANDO INGREDIENTES");
+	}
+	public void baterVitaminaLiquidificador() {
+		System.out.println("BATENDO VITAMINA NO LIQUIDIFICADOR");
+	}
+	public void fritarIngredientesLanche() {
+		System.out.println("FRITANDO A CARNE E OVO PARA O HAMBÚRGUER");
+	}
+	public void pedirParaTrocarGas(Atendente meuAmigo) {
+		meuAmigo.trocarGas();
+	}
+	public void pedirParaTrocarGas(Almoxarife meuAmigo) {
+		meuAmigo.trocarGas();
+	}
+	public void pedirIngredientes(Almoxarife almoxarife) {
+		almoxarife.entregarIngredientes();
+	}
 }
