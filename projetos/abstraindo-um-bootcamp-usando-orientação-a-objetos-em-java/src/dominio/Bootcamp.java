@@ -12,14 +12,18 @@ public class Bootcamp {
   private final LocalDate dataFinal = LocalDate.now().plusDays(45);
   private Set<Dev> devsInscritos = new HashSet<>();
   private Set<Conteudo> conteudos = new LinkedHashSet<>();
-
-
+  
   public Set<Conteudo> getConteudos() {
     return conteudos;
   }
   public void setConteudos(Set<Conteudo> conteudos) {
     this.conteudos = conteudos;
   }
+
+  public Set<Dev> getDevsInscritos() {
+    return devsInscritos;
+  }
+  
   @Override
   public int hashCode() {
     final int prime = 31;
