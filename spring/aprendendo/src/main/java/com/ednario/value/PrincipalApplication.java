@@ -4,11 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AprendendoApplication {
+public class PrincipalApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AprendendoApplication.class, args);
-
-		System.out.println("Hello World!");
+		SpringApplication.run(PrincipalApplication.class, args);
 	}
 }
