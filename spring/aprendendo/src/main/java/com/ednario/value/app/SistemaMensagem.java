@@ -9,19 +9,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class SistemaMensagem implements CommandLineRunner {
   
-  @Value("${nome}")
-  private String nome;
-  @Value("${email}")
-  private String email;
-  @Value("${telefones}")
-  private List<Long> telefones;
+  private Remetente remetente;
 
   @Override
   public void run(String... args) throws Exception {
     System.out.println(
-      "Mensagem enviada por: " + nome 
-       + "\nEmail: " + email 
-       + "\nTelefones: " + telefones);
+      "Mensagem enviada por: " + remetente.getNome() 
+       + "\nEmail: " + remetente.getEmail() 
+       + "\nTelefones: " + remetente.getTelefones());
     System.out.println("Seu cadastro foi realizado com sucesso!");
   }
 }
